@@ -6,9 +6,9 @@ Resources:
       UserPoolName: ${self:custom.stage}-user-pool
       # Set email as an alias
       UsernameAttributes:
-      - email
+        - email
       AutoVerifiedAttributes:
-      - email
+        - email
 
   CognitoUserPoolClient:
     Type: AWS::Cognito::UserPoolClient
@@ -18,7 +18,7 @@ Resources:
       UserPoolId:
         Ref: CognitoUserPool
       ExplicitAuthFlows:
-      - ADMIN_NO_SRP_AUTH
+        - ADMIN_NO_SRP_AUTH
       GenerateSecret: false
 
 # Print out the Id of the User Pool that is created
